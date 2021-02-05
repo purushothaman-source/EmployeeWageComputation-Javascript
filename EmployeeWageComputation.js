@@ -1,6 +1,6 @@
 class Employee {
 
-    getWorkHrs(totalWorkingDays, MaxEmpHrs) {
+    getWorkHrs(company, totalWorkingDays, MaxEmpHrs, empRatePerHr) {
         var workingDays = 0;
         var totalEmpHrs = 0;
         while (workingDays < totalWorkingDays && totalEmpHrs <= MaxEmpHrs) {
@@ -21,11 +21,10 @@ class Employee {
             }
             totalEmpHrs += empHrs;
         }
-        return totalEmpHrs;
+        var salary = empRatePerHr * totalEmpHrs;
+        console.log("Company = ",company," Salary = ", salary)
     }
 }
-empRatePerHr = 20;
 const employeeWage = new Employee();
-var wage = employeeWage.getWorkHrs(20, 100);
-var salary = empRatePerHr * wage;
-console.log("Salary = ", salary)
+employeeWage.getWorkHrs("Dmart",20, 100,20);
+employeeWage.getWorkHrs("Accenture",10, 50,10);
