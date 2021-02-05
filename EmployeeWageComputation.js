@@ -2,9 +2,13 @@ console.log('Welcome to EmployeeWageComputation !');
 var isPresent = 1;
 var isPartTime =2;
 empRatePerHr = 20;
-var totalEmpHrs = 0 ;
-for( var i=1;i<=20;i++){
-var empCheck = Math.floor(Math.random() * 3); 
+var MaxEmpHrs = 100;
+var totalWorkingDays = 20;
+workingDays = 0;
+totalEmpHrs =0;
+while (workingDays < totalWorkingDays && totalEmpHrs <= MaxEmpHrs) {
+var empCheck = Math.floor(Math.random() * 3);
+workingDays++; 
 switch(empCheck){
  case isPresent :
     console.log("Employee is present");
