@@ -3,15 +3,16 @@ var isPresent = 1;
 var isPartTime =2;
 empRatePerHr = 20;
 var empCheck = Math.floor(Math.random() * 3); 
-if (empCheck == isPresent){
+switch(empCheck){
+ case isPresent :
     console.log("Employee is present");
     empHrs = 8;
-}
-else if (empCheck == isPartTime){
+    break;
+ case isPartTime :
     console.log("Employee is part Time");
     empHrs = 4;
-}
-else{
+    break;
+ default :   
     console.log("Employee is absent");
     empHrs = 0;
 }
